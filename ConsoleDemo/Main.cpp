@@ -17,7 +17,20 @@ int _tmain(int argc, _TCHAR* argv[])
 	thd.Run();
 
 
-	getchar();
+
+	char ch[128] = { 0 };
+	while (true)
+	{
+		gets_s(ch);
+
+		if (strcpy_s(ch, "exit") == 0)
+		{
+			break;
+		}
+
+		::Sleep(100);
+	}
+
 
 	thd.Exit(10 * 1000);
 	LogHelper::Exit();

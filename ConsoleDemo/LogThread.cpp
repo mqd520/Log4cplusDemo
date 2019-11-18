@@ -14,7 +14,7 @@ using namespace com;
 
 
 LogThread::LogThread()
-	: Thread(2 * 1000, "LogThread")
+	: Thread(1 * 1000, "LogThread")
 {
 
 }
